@@ -1,6 +1,4 @@
 
- 
-
 import { Controller, 
     Get,
     Post,
@@ -13,7 +11,7 @@ import { Controller,
   } from '@nestjs/common';
   
   import { productInput } from './dto/update.dto';
-  
+  import { createDto } from './dto/product.dto';
   export type Product = {
     id: number;
     title: string;
@@ -57,7 +55,7 @@ import { Controller,
   
   //POST /products
   @Post()
-  create(@Body() input: productInput){
+  create(@Body() input: createDto){
     const id = this.products[this.products.length - 1].id;
 
     const newProduct = {

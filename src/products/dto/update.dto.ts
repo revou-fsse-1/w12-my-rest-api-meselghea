@@ -1,4 +1,4 @@
-export class productInput {
+export class productInput {    
     title: string;
     description: string;
     price: string;
